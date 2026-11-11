@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Flip - Mini Game</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <span class="game-label">Game 3 - Medium</span>
+
+        <h1>🃏 Memory Card Flip</h1>
+
+        <p>
+            Uncover pairs using 3D perspective flips
+            and test your recall ability.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <!-- Rules Button -->
+        <button id="rulesBtn" class="rules-btn">
+            Hide Rules
+        </button>
+
+        <!-- Rules Section -->
+        <section id="rulesSection" class="rules">
+
+            <h2>Rules and Regulations</h2>
+
+            <p>
+                <strong>Objective:</strong>
+                Match all the pairs of cards.
+            </p>
+
+            <h3>Rules</h3>
+
+            <ol>
+                <li>12 cards (6 pairs) are placed face down.</li>
+                <li>Click a card to flip it, then click a second card.</li>
+                <li>If the two cards match, they stay face up.</li>
+                <li>If they don't match, they flip back after 1 second.</li>
+                <li>Matching all pairs wins the game. Your number of moves
+                    is shown at the end, and fewer moves is better.</li>
+            </ol>
+
+            <h3>Regulations</h3>
+
+            <ul>
+                <li>Only two cards can be open at a time.</li>
+                <li>A card that is already matched cannot be clicked again.</li>
+                <li>You cannot click the same card twice in one turn.</li>
+                <li>Cards are shuffled at the start of every new game.</li>
+            </ul>
+
+        </section>
+
+        <!-- Game Card -->
+        <section class="game-card">
+
+            <!-- Scoreboard -->
+            <div class="scoreboard">
+
+                <div class="score">
+                    <h3>MOVES</h3>
+                    <span id="moves">0</span>
+                </div>
+
+                <div class="score">
+                    <h3>PAIRS MATCHED</h3>
+                    <span id="matched">0 / 6</span>
+                </div>
+
+            </div>
+
+            <!-- Message -->
+            <div id="message" class="message">
+                Click any two cards to find matching pairs!
+            </div>
+
+            <!-- Memory Cards -->
+            <div id="gameBoard" class="game-board">
+            </div>
+
+            <!-- Restart -->
+            <button id="restartBtn" class="restart-btn">
+                🔀 Reshuffle & Start New Game
+            </button>
+
+        </section>
+
+        <!-- Result History -->
+        <section class="history-card">
+
+            <div class="history-header">
+
+                <h2>📜 Result History</h2>
+
+                <button id="clearHistoryBtn" class="clear-btn">
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="historyList" class="history-list">
+                <p class="empty-history">
+                    No games played yet.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Back Link -->
+        <div class="back-link">
+            <a href="#">← Back to All Games</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>🎮 Mini Games Hub © 2026</p>
+    </footer>
+
+    <script src="../js/memorygame.js"></script>
+
+</body>
+
+</html>

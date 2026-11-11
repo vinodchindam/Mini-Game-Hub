@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Mini Game</title>
+    <link rel="stylesheet" href="../css/style.css"">
+</head>
+<body>
+
+    <header class="header">
+        <span class="game-label">Game 2 - Easy</span>
+        <h1>✊ ✋ ✌ Rock-Paper-Scissors</h1>
+        <p>Take on the computer in the classic duel of hands.
+           First to 5 wins!</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Rules Section -->
+        <button id="rulesBtn" class="rules-btn">
+            Hide Rules
+        </button>
+
+        <section id="rulesSection" class="rules">
+            <h2>Rules and Regulations</h2>
+
+            <p><strong>Objective:</strong>
+                Beat the computer in each round.
+            </p>
+
+            <h3>Rules</h3>
+            <ol>
+                <li>Choose Rock, Paper, or Scissors.
+                    The computer picks one at random.</li>
+                <li>Rock beats Scissors, Scissors beats Paper,
+                    and Paper beats Rock.</li>
+                <li>If both choose the same, the round is a draw.</li>
+                <li>The first player to reach 5 points wins the match.</li>
+                <li>A win gives 1 point; a draw gives no points.</li>
+            </ol>
+
+            <h3>Regulations</h3>
+            <ul>
+                <li>Only one choice per round.</li>
+                <li>The computer's choice is hidden until you choose.</li>
+                <li>After the match ends, buttons are disabled
+                    until Restart is clicked.</li>
+            </ul>
+        </section>
+
+        <!-- Game Section -->
+        <section class="game-card">
+
+            <!-- Scoreboard -->
+            <div class="scoreboard">
+                <div class="score">
+                    <h3>PLAYER (YOU)</h3>
+                    <span id="playerScore">0</span>
+                </div>
+
+                <h2>VS</h2>
+
+                <div class="score">
+                    <h3>COMPUTER</h3>
+                    <span id="computerScore">0</span>
+                </div>
+            </div>
+
+            <!-- Choices -->
+            <div class="battle-area">
+
+                <div class="player-choice">
+                    <h3>Your Pick</h3>
+                    <div id="playerPick" class="pick">❔</div>
+                </div>
+
+                <div class="versus-icon">⚔️</div>
+
+                <div class="computer-choice">
+                    <h3>Computer Pick</h3>
+                    <div id="computerPick" class="pick">❔</div>
+                </div>
+
+            </div>
+
+            <!-- Message -->
+            <div id="message" class="message">
+                First to 5 points wins the match! Make your move.
+            </div>
+
+            <!-- Buttons -->
+            <div class="choices">
+
+                <button class="choice-btn" data-choice="rock">
+                    <span>✊</span>
+                    <strong>Rock</strong>
+                </button>
+
+                <button class="choice-btn" data-choice="paper">
+                    <span>✋</span>
+                    <strong>Paper</strong>
+                </button>
+
+                <button class="choice-btn" data-choice="scissors">
+                    <span>✌️</span>
+                    <strong>Scissors</strong>
+                </button>
+
+            </div>
+
+            <!-- Restart -->
+            <button id="restartBtn" class="restart-btn">
+                🔄 Restart Match
+            </button>
+
+        </section>
+
+        <!-- Result History -->
+        <section class="history-card">
+
+            <div class="history-header">
+                <h2>📜 Result History</h2>
+                <button id="clearHistoryBtn" class="clear-btn">
+                    Clear History
+                </button>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <p class="empty-history">No games played yet.</p>
+            </div>
+
+        </section>
+
+        <div class="back-link">
+            <a href="#">← Back to All Games</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>🎮 Mini Games Hub © 2026</p>
+    </footer>
+
+    <script src="../js/rockpaper.js"></script>
+
+</body>
+</html>

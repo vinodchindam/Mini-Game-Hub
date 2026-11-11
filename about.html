@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Games Hub</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f7;
+            color: #252525;
+        }
+
+        /* Navbar */
+
+        nav {
+            background: #171923;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 25px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #8b9cff;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #dce5ff, #f2e5ff);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #171923;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background: #5559e8;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background: #4145c9;
+        }
+
+        /* Games Section */
+
+        .games-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .games-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        /* Game Cards */
+
+        .games-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .game-icon {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .game-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .game-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .game-level {
+            display: inline-block;
+            background: #e4f5e9;
+            color: #267348;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .play-btn {
+            display: inline-block;
+            background: #5559e8;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .play-btn:hover {
+            background: #4145c9;
+        }
+
+        /* About Section */
+
+        .about {
+            background: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+
+        .about h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #171923;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .games-container {
+                grid-template-columns: 1fr;
+            }
+
+            .games-section h2 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <h2>🎮 Mini Games Hub</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>Welcome to Mini Games Hub 🎮</h1>
+
+        <p>
+            Play exciting mini games, challenge your brain
+            and improve your skills!
+        </p>
+
+        <button onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">
+            Explore Games
+        </button>
+
+    </section>
+
+
+    <!-- Games Section -->
+
+    <section class="games-section" id="games">
+
+        <h2>Our Games</h2>
+
+        <p class="section-desc">
+            Choose your favourite game and start playing!
+        </p>
+
+        <div class="games-container">
+
+            <!-- Number Guessing Game -->
+
+            <div class="game-card">
+
+                <div class="game-icon">🔢</div>
+
+                <span class="game-level">Easy</span>
+
+                <h3>Number Guessing</h3>
+
+                <p>
+                    Guess the secret number selected by the computer.
+                    You have 7 attempts to find the correct number
+                    between 1 and 100.
+                </p>
+
+                <a href="games/number-guessing.html"
+                   class="play-btn">
+                    Play Now
+                </a>
+
+            </div>
+
+
+            <!-- Memory Card Game -->
+
+            <div class="game-card">
+
+                <div class="game-icon">🃏</div>
+
+                <span class="game-level">Medium</span>
+
+                <h3>Memory Card Flip</h3>
+
+                <p>
+                    Test your memory by flipping cards and finding
+                    all 6 matching pairs. Complete the game using
+                    fewer moves.
+                </p>
+
+                <a href="games/memory-card.html"
+                   class="play-btn">
+                    Play Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+
+    <section class="about" id="about">
+
+        <h2>About Mini Games Hub</h2>
+
+        <p>
+            Mini Games Hub is a fun gaming platform developed
+            using HTML, CSS, JavaScript and Bootstrap.
+            Players can explore different games, follow game
+            rules and enjoy interactive gaming experiences.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>🎮 Mini Games Hub © 2026</p>
+
+        <p>Designed with HTML, CSS and JavaScript</p>
+
+    </footer>
+ <script src="index.js"></script>
+</body>
+
+</html>

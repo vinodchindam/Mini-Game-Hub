@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic-Tac-Toe - Mini Games Hub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <span class="game-label">Game 4 - Bonus Game</span>
+
+        <h1>
+            <span class="heading-x">X</span>
+            <span class="heading-o">O</span>
+            Tic-Tac-Toe
+        </h1>
+
+        <p>
+            Two-player local showdown.
+            Connect three marks in a line to triumph!
+        </p>
+
+    </header>
+
+    <main class="container">
+
+        <!-- Rules Button -->
+        <button id="rulesBtn" class="rules-btn">
+            Hide Rules
+        </button>
+
+        <!-- Rules Section -->
+        <section id="rulesSection" class="rules">
+
+            <h2>Rules and Regulations</h2>
+
+            <p>
+                <strong>Objective:</strong>
+                Place three of your marks in a row.
+            </p>
+
+            <h3>Rules</h3>
+
+            <ol>
+                <li>Two players take turns, Player 1 as X
+                    and Player 2 as O. X always starts.</li>
+
+                <li>Click an empty square to place your mark.</li>
+
+                <li>The first player to get 3 marks in a row
+                    (horizontal, vertical, or diagonal) wins.</li>
+
+                <li>If all 9 squares are filled and nobody
+                    has won, the game is a draw.</li>
+            </ol>
+
+            <h3>Regulations</h3>
+
+            <ul>
+                <li>A square that is already filled cannot be changed.</li>
+
+                <li>Players must alternate turns.</li>
+
+                <li>Once someone wins, the board is locked
+                    until "New Game" is clicked.</li>
+            </ul>
+
+        </section>
+
+        <!-- Game Card -->
+        <section class="game-card">
+
+            <!-- Turn Message -->
+            <h2 id="turnMessage" class="turn-message">
+                Player 1 (X)'s turn to move
+            </h2>
+
+            <!-- Tic Tac Toe Board -->
+            <div class="game-board" id="gameBoard">
+
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+
+            </div>
+
+            <!-- New Game Button -->
+            <button id="newGameBtn" class="restart-btn">
+                🔄 New Game / Reset Board
+            </button>
+
+        </section>
+
+        <!-- Result History -->
+        <section class="history-card">
+
+            <div class="history-header">
+
+                <h2>📜 Result History</h2>
+
+                <button id="clearHistoryBtn" class="clear-btn">
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="historyList" class="history-list">
+
+                <p class="empty-history">
+                    No games played yet.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Back Link -->
+        <div class="back-link">
+            <a href="#">← Back to All Games</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>🎮 Mini Games Hub © 2026</p>
+    </footer>
+
+    <script src="../js/tictactoe.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing - Mini Game</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Game Header -->
+        <header>
+            <span class="level">Game 1 - Easy</span>
+            <h1>🔢 Number Guessing</h1>
+            <p>Can you figure out the mystery number chosen by the computer?</p>
+        </header>
+
+        <!-- Rules Section -->
+        <details class="rules" open>
+            <button class="rules-toggle" id="rulesBtn">📜 Show/Hide Rules</button>
+
+            <div class="rules-box" id="rulesBox">
+                <h2>Rules and Regulations</h2>
+
+                <p><b>Objective:</b> Guess the secret number chosen by the computer.</p>
+
+                <h3>Rules</h3>
+                <ol>
+                    <li>The computer picks a random number between 1 and 100.</li>
+                    <li>You have 7 attempts to guess it.</li>
+                    <li>After each guess you are told whether it is too high or too low.</li>
+                    <li>Guess the number within 7 attempts to win; otherwise you lose and the number is revealed.</li>
+                    <li>Click "Play Again" to start a new round.</li>
+                </ol>
+
+                <h3>Regulations</h3>
+                <ul>
+                    <li>Only whole numbers from 1 to 100 are accepted.</li>
+                    <li>An empty input, text, or a number outside the range shows an error message and does not use up an attempt.</li>
+                    <li>Each round has a new secret number.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Game Card -->
+        <section class="game-card">
+
+            <div class="attempts" id="attempts">
+                <h3>ATTEMPTS TRACKER</h3>
+                <h2>7 of 7 remaining</h2>
+            </div>
+
+            <div class="message" id="message">
+                Enter your first guess between 1 and 100!
+            </div>
+
+            <div class="input-area">
+                <input type="number" id="guessInput" placeholder="1 - 100" min="1" max="100">
+                <button class="submit-btn" id="submitBtn">Submit Guess</button>
+            </div>
+
+            <button class="reset-btn" id="resetBtn">🔄 Play Again / Reset</button>
+
+        </section>
+
+        <!-- Result History -->
+        <section class="history">
+
+            <div class="history-header">
+                <h2>📜 Result History</h2>
+                <button class="clear-btn" id="clearHistoryBtn">Clear History</button>
+            </div>
+
+            <div class="history-content">
+                <!-- Results will appear here -->
+            </div>
+
+        </section>
+
+        <!-- Back Link -->
+        <div class="back">
+            <a href="#">← Back to All Games</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        🎮 Mini Games Hub © 2026
+    </footer>
+<script src="../js/number.js"></script>
+</body>
+</html>
